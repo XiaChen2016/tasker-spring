@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tasker - Administrator</title>
+    <link rel="stylesheet" href="/resources/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="/resources/js/admin.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+        <h2>Tasker <small id="profile" class="pull-right" onclick="logout()"></small></h2>
+ </div>
+
+      <div class="container withBorder" >
+		
+			<label class="newUser">New user</label>
+			<form class="form-inline createUserForm">
+				  <div class="form-group">
+				    <label for="newUserName">Username</label>
+				    <input type="text" class="form-control" id="newUserName">
+				  </div>
+				  <div class="form-group">
+				    <label for="newUserPassword">Password</label>
+				    <input type="text" class="form-control" id="newUserPassword">
+				  </div>
+				  <div class="checkbox">
+				        <label>
+				          <input type="checkbox" id="newUserIsAdmin">  Admin
+				        </label>
+				      </div>
+				  <button type="button" class="btn btn-default" onclick="createNewUser()">Submit</button>
+			</form>
+	 </div>
+	<div class="container withBorder" >  
+	<label class="newUser">List of users</label>
+          <table class="resultTable" id="resultTable">
+          
+          </table>
+      </div>
+        <script>
+    $(document).ready( function() {
+    	getPrincipal();
+    } );
+  </script>
+  </body>
+</html>

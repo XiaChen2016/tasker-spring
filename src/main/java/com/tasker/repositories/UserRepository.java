@@ -16,20 +16,20 @@ import com.tasker.domain.users.Role;
 public class UserRepository {
 	
 	public Map<String, User> users;
-	public User user1, user2;
+	public User user;
 	
 	public UserRepository() {
 		
 		users = new HashMap< String, User >();
 		List<Role> roles = Arrays.asList( new Role[] { new Role("ROLE_ADMIN") } );
 		
-		user1 = new User.Builder()
+		user = new User.Builder()
 				.userName("Bilbo")
 				.id( "0")
 				.password("Baggins")
 				.roles( roles )
 				.build();
-		users.put( user1.getId(), user1 );
+		users.put( user.getId(), user );
 		
 	}
 	
